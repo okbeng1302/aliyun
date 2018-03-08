@@ -1,5 +1,17 @@
 # pyspider environment
 
+(重点：在使用阿里云 安装 pyspider 时 总是报各种错误，无论是CentOS 还是 Ubuntu，猜测是阿里云默认的python环境的问题，
+所以在安装pyspider前，安装 anaconda
+)
+
+Anaconda安装  
+
+1. 首先从官网下载 linux 版本，（分三个版本，我选择的第一个版本）
+
+2. 下载的是sh文件， 使用命令  bash Anaconda.sh，就可以安装了，一路enter yes，就可以了
+
+3. 运行python 发现 python是 anaconda 默认的环境。
+
 pyspider  python2.7.12
 
 查看官方文档，安装所需的依赖包 
