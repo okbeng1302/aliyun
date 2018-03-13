@@ -10,6 +10,9 @@ Anaconda安装
 
 2. 下载的是sh文件， 使用命令  bash Anaconda.sh，就可以安装了，一路enter yes，就可以了
 
+	执行命令 >> source ~/.bashrc
+
+
 3. 运行python 发现 python是 anaconda 默认的环境。
 
 pyspider  python2.7.12
@@ -141,7 +144,22 @@ files = relative/directory/*.ini    ;可以指定一个或多个以.ini结束的
 	
 	stdout_logfile=/usr/local/pyspider/pyspider.log
 	
+	
+	[program:scrapyd]
+	
+	command=scrapyd
+	
+	autostart=true
+	
+	autorestart=true
+	
+	stdout_logfile=/usr/local/scrapyd/log/scrapyd.log
+	
+	stderr_logfile=/usr/local/scrapyd/log/scrapyd_err.log
+	
 启动：
+	supervisord -c /etc/supervisord.conf
+	
 	supervisorctl reload
 	
 	supervisorctl status

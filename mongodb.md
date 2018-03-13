@@ -21,11 +21,12 @@
 
 	/etc/mongodb.conf
 	内容如下：
-		port=27017 # mongo端口
-		dbpath=/usr/local/mongo/data/data # 数据存储路径
-		logpath=/usr/local/mongo/data/log # 日志存储路径
-		fork=true
+		port=27017  # mongo端口
+		dbpath=/usr/local/mongo/data/data
+		logpath=/usr/local/mongo/data/log/mongodb.log # 提前建立好mongdb.log文件
 		logappend=true
+		fork=true
+		auth=true
 		auth=true # 需要账号密码验证
 		bind_ip=0.0.0.0 # 远程登录时，需要使用
 
